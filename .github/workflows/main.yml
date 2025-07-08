@@ -31,14 +31,19 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
           
-    - name: Grant execute permission for gradlew
-      run: chmod +x NFCCardApp/gradlew
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew || echo "gradlew not found, using gradle wrapper"
       
     - name: Build debug APK
-      run: cd NFCCardApp && ./gradlew assembleDebug
+      run: |
+        if [ -f "./gradlew" ]; then
+          ./gradlew assembleDebug
+        else
+          gradle assembleDebug
+        fi
       
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
         name: NFCCardApp-debug
-        path: NFCCardApp/app/build/outputs/apk/debug/app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
