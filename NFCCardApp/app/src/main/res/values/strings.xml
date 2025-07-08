@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NFC卡读写工具</string>
+    <string name="nfc_not_supported">此设备不支持NFC功能</string>
+    <string name="nfc_disabled">请在设置中启用NFC功能</string>
+    <string name="nfc_detected">检测到NFC卡</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="password_hint">输入6位数字密码</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="password_correct">密码验证成功</string>
+    <string name="password_incorrect">密码错误，请重试</string>
+    <string name="current_data">当前数据: %s</string>
+    <string name="no_data">无数据</string>
+    <string name="write_new_data">写入新数据:</string>
+    <string name="data_hint">输入要写入的英文或数字...</string>
+    <string name="write_data">写入数据</string>
+    <string name="read_data">重新读取</string>
+    <string name="read_success">数据读取成功</string>
+    <string name="write_success">数据写入成功</string>
+    <string name="read_failed">读取失败: %s</string>
+    <string name="write_failed">写入失败: %s</string>
+    <string name="data_too_large">数据太大，无法写入</string>
+    <string name="unsupported_tag">不支持的NFC卡类型</string>
+    <string name="format_success">卡片格式化并写入成功</string>
+    <string name="format_failed">格式化失败: %s</string>
+    <string name="empty_data">请输入要写入的数据</string>
+    <string name="nfc_status_waiting">请将NFC卡靠近手机...</string>
+</resources>
